@@ -31,6 +31,7 @@ class MainActivity : ComponentActivity() {
 @ExperimentalStdlibApi
 @Composable
 fun SimpleComposeApp() {
+
     val toggleState = false
     val alpha: Float by animateFloatAsState(
         if (toggleState) 1f else 0f,
