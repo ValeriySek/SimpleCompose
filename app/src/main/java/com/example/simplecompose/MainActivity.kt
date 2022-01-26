@@ -15,9 +15,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import com.example.simplecompose.compose_galaxy.*
-import com.example.simplecompose.compose_galaxy.GalaxyAnimatable
-import com.example.simplecompose.dots_and_lines.DotsAndLinesDemo
 import com.example.simplecompose.round_graph.RoundGraph
 import com.example.simplecompose.ui.theme.SimpleComposeTheme
 
