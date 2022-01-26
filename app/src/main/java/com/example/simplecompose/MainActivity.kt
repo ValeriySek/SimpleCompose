@@ -6,22 +6,22 @@ import androidx.activity.compose.setContent
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.simplecompose.first.AnimatedCircle
-import com.example.simplecompose.first.FirstScreen
+import com.example.simplecompose.compose_galaxy.*
+import com.example.simplecompose.compose_galaxy.GalaxyAnimatable
+import com.example.simplecompose.dots_and_lines.DotsAndLinesDemo
+import com.example.simplecompose.round_graph.RoundGraph
 import com.example.simplecompose.ui.theme.SimpleComposeTheme
 
+@ExperimentalStdlibApi
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +31,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@ExperimentalStdlibApi
 @Composable
 fun SimpleComposeApp() {
     val toggleState = false
@@ -44,16 +45,23 @@ fun SimpleComposeApp() {
                 .fillMaxSize(),
             color = Color.White
         ) {
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-//                .alpha(alpha)
-                    .graphicsLayer(alpha = alpha)
-                    .background(color = Color.Blue)
-            ) {
-
-            }
-            AnimatedCircle(proportions = listOf(0.33f, 0.67f), colors = listOf(Color.Cyan, Color.Magenta))
+//            Box(
+//                modifier = Modifier
+//                    .fillMaxSize()
+//                    .graphicsLayer(alpha = alpha)
+//                    .background(color = Color.Blue)
+//            ) {
+//
+//            }
+//            AnimatedCircle(proportions = listOf(0.33f, 0.67f), colors = listOf(Color.Cyan, Color.Magenta))
+//            Galaxy(modifier = Modifier
+//                .fillMaxSize()
+//                .background(color = Color.Black))
+//            DotsAndLinesDemo()
+            RoundGraph(
+                proportions = listOf(0.5f, 0.5f),
+                colors = listOf(Color.Cyan, Color.Magenta)
+            )
         }
     }
 }
